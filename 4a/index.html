@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .ui-content {
+            padding: 20px;
+        }
+        .custom-list {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>jQuery Mobile Demo</h1>
+        </div>
+
+        <div data-role="content">
+            <h2>Welcome to jQuery Mobile Demo</h2>
+            <p>This demo showcases various jQuery Mobile components.</p>
+            
+            <!-- Navigation Buttons -->
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#forms" data-role="button" data-theme="b">Forms Demo</a>
+                </div>
+            </div>
+            
+            <!-- Collapsible Content -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="a">
+                <h3>About jQuery Mobile</h3>
+                <p>jQuery Mobile is a touch-optimized web framework for smartphones and tablets.</p>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" class="ui-btn-active">Home</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forms Page -->
+    <div data-role="page" id="forms">
+        <div data-role="header">
+            <h1>Forms Demo</h1>
+            <a href="#home" data-icon="home" class="ui-btn-right">Home</a>
+        </div>
+
+        <div data-role="content">
+            <form>
+                <div data-role="fieldcontain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" value="">
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" value="">
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="slider">Rating:</label>
+                    <input type="range" name="slider" id="slider" value="0" min="0" max="10" data-highlight="true">
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="select-choice-1" class="select">Choose a color:</label>
+                    <select name="select-choice-1" id="select-choice-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Choose your interests:</legend>
+                        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom">
+                        <label for="checkbox-1">Sports</label>
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom">
+                        <label for="checkbox-2">Music</label>
+                        <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom">
+                        <label for="checkbox-3">Movies</label>
+                    </fieldset>
+                </div>
+
+                <button type="submit" data-theme="b">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
